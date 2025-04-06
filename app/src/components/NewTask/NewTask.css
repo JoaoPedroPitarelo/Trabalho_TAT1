@@ -1,0 +1,81 @@
+.modal-overlay {
+    position: absolute;
+    top: 30%;   
+    left: 50%;
+    right: 50%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+  
+.modal {
+    text-align: center;
+    justify-content: space-around;
+    background: rgb(45, 45, 45);
+
+    display: flex;
+    flex-direction: column;
+    padding: 1.0em;
+    min-width: 600px;
+    min-height: 400px;
+    border-radius: 8px;
+    width: 400px;
+}
+
+.modal > h2{
+    font-size: 2em;
+    color: white;
+}
+
+.modal > .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 30px;
+}
+
+.modal > .form > input, textarea {
+    background-color: rgb(32, 32, 32);
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    font-size: 15px;
+}
+
+.modal > .buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}
+
+.modal > .buttons > #cancelar {
+  background-color: red;
+  border: none;
+  color: white;
+  padding: 0.5em;
+  font-size: 20px;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+.modal > .buttons > #cancelar:hover {
+    cursor: pointer;
+    background-color: rgba(185, 2, 2, 0.991);
+}
+
+.modal > .buttons > #salvar {
+    transition: 0.3s ease;
+    background-color: rgb(17, 255, 0);
+    padding: 0.5em 1em 0.5em 1em;
+    font-size: 20px;
+    border-radius: 10px;
+    border: none;
+}
+
+.modal > .buttons > #salvar:hover {
+    cursor: pointer;
+    background-color: rgb(14, 172, 2);
+}

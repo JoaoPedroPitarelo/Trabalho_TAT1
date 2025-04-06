@@ -1,0 +1,27 @@
+
+.header {
+    background-color: #3D42FE;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+
+    box-sizing: border-box;
+    border-radius: 0% 0% 3% 3%;
+}
+
+
+.header > img {
+    padding: 1%;
+    max-width: 10%;
+}
+
+.header > .content {
+    color: white;
+    text-align: center;
+
+
+    text-align: center;
+    font-family: 'Sansita Swashed', sans-serif;
+    font-size: 2em;
+}

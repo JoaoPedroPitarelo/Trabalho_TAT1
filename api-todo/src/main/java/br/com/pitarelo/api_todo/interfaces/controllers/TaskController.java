@@ -24,6 +24,7 @@ public class TaskController {
 
     // GetAll
     @GetMapping
+    @CrossOrigin(origins = "http://localhost:3000")
     public ResponseEntity<List<Task>> getTasks() {
         List<Task> listTasks = taskService.getTasks();
 
@@ -44,6 +45,7 @@ public class TaskController {
 
     // Create
     @PostMapping
+    @CrossOrigin(origins = "http://localhost:3000")
     public ResponseEntity<?> createTask(@RequestBody @Valid TaskCreateDTO newTask, UriComponentsBuilder uriBuilder) {
         Task task = new Task(newTask);
         taskService.createTask(task);
@@ -56,6 +58,7 @@ public class TaskController {
     // Update
     @PutMapping("/{taskId}")
     @Transactional
+    @CrossOrigin(origins = "http://localhost:3000")
     public ResponseEntity<?> updateTask(@RequestBody @Valid TaskUpdateDTO modifiedTask, @PathVariable Long taskId) {
         Task task = taskService.getById(taskId);
 
@@ -69,6 +72,7 @@ public class TaskController {
 
     // Delete
     @DeleteMapping("/{taskId}")
+    @CrossOrigin(origins = "http://localhost:3000")
     @Transactional
     public ResponseEntity<?> deleteTask(@PathVariable Long taskId) {
         Task task = taskService.getById(taskId);

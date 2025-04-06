@@ -1,0 +1,55 @@
+.tarefa-card {
+    display: flex;
+    background-color: #2d2d2d;
+    color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    max-width: 1200px;
+    margin: 16px auto;
+    font-family: sans-serif;
+  }
+
+.faixa-lateral {
+  border: none;
+  width: 30px;
+  transition: 0.3s ease;
+  background-color: #f10f0f; 
+}
+
+.faixa-lateral:hover {
+  transition-property: all;
+  width: 40px;
+  background-color: #36fb00; 
+  cursor: pointer;
+}
+  
+.botao-detalhes {
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: inherit;
+  display: flex;
+  padding: 16px;
+  flex: 1;
+}
+
+.conteudo {
+ display: flex;
+ flex-direction: column;
+ text-align: left;
+}
+
+.titulo {
+  margin: 4px;
+  font-size: 24px;
+  font-weight: bold;
+}
+  
+
+.descricao {
+  margin: 4px;
+  font-size: 18px;
+  color: #cccccc;
+}
+  
