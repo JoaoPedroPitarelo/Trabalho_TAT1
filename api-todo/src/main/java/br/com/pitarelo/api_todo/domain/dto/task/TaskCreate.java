@@ -1,8 +1,8 @@
-package br.com.pitarelo.api_todo.domain.model;
+package br.com.pitarelo.api_todo.domain.dto.task;
 
 import jakarta.validation.constraints.NotNull;
 
-public record TaskCreateDTO(
+public record TaskCreate(
         @NotNull
         String title,
         String description) {

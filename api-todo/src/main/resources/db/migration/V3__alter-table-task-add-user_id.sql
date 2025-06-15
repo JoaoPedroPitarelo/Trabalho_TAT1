@@ -1,0 +1,3 @@
+ALTER TABLE task
+ADD COLUMN user_id INT,
+ADD CONSTRAINT fk_user FOREIGN KEY (user_id) REFERENCES users(id);

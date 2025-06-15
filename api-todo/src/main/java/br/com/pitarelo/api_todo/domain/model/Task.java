@@ -1,11 +1,20 @@
 package br.com.pitarelo.api_todo.domain.model;
 
+import br.com.pitarelo.api_todo.domain.dto.task.TaskCreate;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.util.Objects;
 
 @Entity(name = "Task")
 @Table(name = "task")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Task {
 
     @Id
@@ -21,14 +30,14 @@ public class Task {
     @Column(nullable = false, columnDefinition = "completed")
     private boolean completed;
 
-    // Construtor vazio para o Hibernate
-    public Task() {
-    }
+    @ManyToOne
+    @JoinColumn(name = "user_id", nullable = false)
+    private User user;
 
     // Outros Construtores -----------
 
     // Construtor para o createDTO
-    public Task(TaskCreateDTO newTask) {
+    public Task(TaskCreate newTask) {
         this.title = newTask.title();
         this.description = newTask.description();
     }

@@ -1,0 +1,92 @@
+/* src/components/Register/register.css */
+
+/* Estilo para o contêiner externo que centraliza o card de registro na página */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Garante que o contêiner ocupe toda a altura da viewport */
+    background-color: #262626; /* Cor de fundo da página */
+    width: 100%; 
+}
+
+/* Estilo para o card de registro (o div.content) */
+.content {
+    display: flex;
+    flex-direction: column; /* Organiza os itens em coluna */
+    align-items: center; /* Centraliza os itens horizontalmente dentro do card */
+    justify-content: center; /* Centraliza os itens verticalmente dentro do card */
+    width: 30rem; /* Largura do card de registro */
+    padding: 2rem; /* Espaçamento interno */
+    background-color: #3D42FE; /* Fundo azul para o card */
+    border-radius: 8px; /* Cantos arredondados */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    text-align: center; /* Centraliza o texto dentro do card (h2, p) */
+}
+
+/* Estilos adicionais para os elementos dentro do .content para melhorar a aparência */
+.content h2 {
+    font-family: 'Sansita Swashed', sans-serif; /* Fonte personalizada, se disponível */
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+    color: #ffffff; /* Cor do título */
+}
+
+.content form {
+    width: 100%; 
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Espaço entre os divs de input */
+}
+
+.content form div {
+    text-align: left; /* Alinha o texto das labels à esquerda */
+}
+
+.content label {
+    display: block; /* Faz a label ocupar a própria linha */
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #ffffff; /* Cor da label */
+}
+
+.content input[type="text"],
+.content input[type="email"], /* Adicionado input type email */
+.content input[type="password"] {
+    width: calc(100% - 20px); /* Ajusta a largura considerando o padding */
+    padding: 10px;
+    border: 1px solid #0c71f6; /* Borda azul */
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.content button[type="submit"] {
+    background-color: #242c3f; /* Fundo do botão */
+    color: white;
+    padding: 10px 17px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease; /* Transição suave no hover */
+}
+
+.content button[type="submit"]:hover {
+    background-color: #38486c; /* Cor do botão no hover */
+}
+
+.content p {
+    margin-top: 1.5rem;
+    color: #ffffff; /* Cor do texto do parágrafo */
+}
+
+.content p a {
+    color: #262527; /* Cor do link */
+    font-size: 1.2rem;
+    text-decoration: none; /* Remove sublinhado padrão */
+}
+
+.content p a:hover {
+    text-decoration: underline; /* Adiciona sublinhado no hover */
+}
